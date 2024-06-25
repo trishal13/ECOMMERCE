@@ -39,6 +39,9 @@ const { checkout, paymentVerification } = require("../controller/paymentCtrl");
 
 const router = express.Router();
 
+router.get("/", (req, res) => {
+    res.send("fsdfdsf");
+});
 router.post("/register", createUser);
 router.post("/forgot-password-token", forgotPasswordToken);
 router.put("/reset-password/:token", resetPassword);

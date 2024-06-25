@@ -31,7 +31,7 @@ app.use(FileUpload({
     tempFileDir: '/tmp/',
 }));
 
-app.use(morgan("dev"));
+// app.use(morgan("dev"));
 app.use(bodyParser.json());
 app.use(cookieParser());
 
@@ -45,9 +45,14 @@ app.use("/api/coupon", couponRouter);
 app.use("/api/color", colorRouter);
 app.use("/api/enquiry", enqRouter);
 app.use("/api/upload", uploadRouter);
+app.use("/", authRouter);
 
 app.use(notFound);
 app.use(errorHandler);
+
+// app.get("/",(req,res)=>{
+//     res.send("hello");
+// });
 
 app.listen(PORT, () => {
     console.log(`Server running on PORT: ${PORT}`);
