@@ -11,5 +11,5 @@ exports.cloudinaryConnect= ()=>{
     } catch(error){
         console.log("Error connecting cloudinary"+error);
         throw new Error(error);
-    }
+    }  
 }
