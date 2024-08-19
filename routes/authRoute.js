@@ -40,7 +40,7 @@ const { checkout, paymentVerification } = require("../controller/paymentCtrl");
 const router = express.Router();
 
 router.get("/", (req, res) => {
-    res.send("fsdfdsf");
+    res.send("Hello World!!");
 });
 router.post("/register", createUser);
 router.post("/forgot-password-token", forgotPasswordToken);

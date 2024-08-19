@@ -119,7 +119,7 @@ const handleRefreshToken = asyncHandler(async (req, res) => {
         throw new Error("No refresh token present in db or not matched");
     }
     jwt.verify(refreshToken, process.env.JWT_SECRET, (err, decoded) => {
-        if (err || user.id !== decoded.id){
+        if (err || user?._id !== decoded.id){
             throw new Error("There is something wrong with the refresh token");
         }
         const accessToken = generateToken(user?._id);
