@@ -1,6 +1,6 @@
 # Ecommerce Backend
 
-This project is the backend service for an e-commerce project, providing APIs for managing products, categories, users, and orders.
+This project is the backend service for my e-commerce project EazyBazaar, providing APIs for managing products, categories, users, and orders.
 
 ## Features
 
